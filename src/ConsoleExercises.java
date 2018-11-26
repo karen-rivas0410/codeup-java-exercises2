@@ -43,6 +43,37 @@ public class ConsoleExercises {
         String userSentence = sc.nextLine();
         System.out.println(userSentence);
 
+//        Calculate the perimeter and area of Codeup's classrooms
+//        Prompt the user to enter values of length and width of a classroom at Codeup.
+//        Use the .nextLine method to get user input and cast the resulting string to a numeric type.
+//        Assume that the rooms are perfect rectangles.
+//        Assume that the user will enter valid numeric data for length and width.
+//        Display the area and perimeter of that classroom.
+//        The area of a rectangle is equal to the length times the width, and the perimeter of a rectangle
+//        is equal to 2 times the length plus 2 times the width.
+
+        System.out.println("Enter the length of the Codeup classroom: ");
+        double length = Double.parseDouble(sc.nextLine());
+
+        System.out.println("Enter the width of the Codeup classroom: ");
+        double width = Double.parseDouble(sc.nextLine());
+
+        System.out.println("Enter the height of the Codeup classroom: ");
+        double height = Double.parseDouble(sc.nextLine());
+
+
+        double getArea = length * width;
+        double getPerimeter = (2 * length) + (2 * width);
+        double getVolume = length * width * height;
+        System.out.println("This is the Area of the class room: " + getArea);
+        System.out.println("This is the Perimeter of the class room: " + getPerimeter);
+        System.out.println("This is the Volume of the class room: " + getVolume);
+
+//        Bonuses
+//        Accept decimal entries //done
+//        Calculate the volume of the rooms in addition to the area and perimeter //done
+
+
 
 
 
