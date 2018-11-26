@@ -73,6 +73,11 @@ public class ConsoleExercises {
 //        Accept decimal entries //done
 //        Calculate the volume of the rooms in addition to the area and perimeter //done
 
+//        sc.useDelimeter("\n"); //does not work
+
+//        How does this change the way your program operates?
+//        Rewrite your classroom calculating program to use nextInt method. If you added the line of code above to
+//        your application, you should now have no trouble handling multiple pieces of user input.
 
 
 
