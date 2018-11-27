@@ -91,21 +91,63 @@ public class ControlFlowExercises {
 //        3      | 9       | 27
 //        4      | 16      | 64
 //        5      | 25      | 125
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Please enter a Integer: ");
-        int userInput = sc.nextInt();
-        System.out.println("\nHere is your table!\n");
-        System.out.println(("Number | Squared | Cubed"));
-        System.out.println("====== | ======= | ======");
-        for (int i = 1; i <= userInput; i += 1) {
-            int numSquared = (int) Math.pow(i, 2);
-            int numCubed = (int) Math.pow(i, 3);
 
-        String message =  i + "    " +
-                "  |   " + numSquared + "     |   " + numCubed;
-        System.out.println(message);
-//        System.out.printf("%-6d | %-7d | %-5d%n", i, (int) Math.pow(i, 2), (int) Math.pow(i, 3)); //ALTERNATIVE TO MY SOLUTION//
-        }
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Please enter a Integer: ");
+//        int userInput = sc.nextInt();
+//        System.out.println("\nHere is your table!\n");
+//        System.out.println(("Number | Squared | Cubed"));
+//        System.out.println("====== | ======= | ======");
+//        for (int i = 1; i <= userInput; i += 1) {
+//            int numSquared = (int) Math.pow(i, 2);
+//            int numCubed = (int) Math.pow(i, 3);
+//
+//        String message =  i + "    " +
+//                "  |   " + numSquared + "     |   " + numCubed;
+//        System.out.println(message);
+////        System.out.printf("%-6d | %-7d | %-5d%n", i, (int) Math.pow(i, 2), (int) Math.pow(i, 3)); //ALTERNATIVE TO MY SOLUTION//
+//        }
+
+//        Convert given number grades into letter grades.
+//        Prompt the user for a numerical grade from 0 to 100.
+//        Display the corresponding letter grade.
+//        Prompt the user to continue.
+//        Assume that the user will enter valid integers for the grades.
+//        The application should only continue if the user agrees to.
+//        Grade Ranges:
+//
+//        A : 100 - 88
+//        B : 87 - 80
+//        C : 79 - 67
+//        D : 66 - 60
+//        F : 59 - 0
+        Scanner sc = new Scanner(System.in);
+        boolean userContinues = true;
+        do {
+        System.out.println("Please enter a grade from 0 to 100: ");
+        int userInput = sc.nextInt();
+        for (int i = 0; i < userInput; i += 1); {
+                if (userInput >= 88 && userInput <= 100){
+                    System.out.println("Your grade is A");
+                }else if (userInput >= 80 && userInput <= 87) {
+                    System.out.println("Your grade is B");
+                }else if (userInput >= 67 && userInput <= 79){
+                    System.out.println("Your grade is C");
+                }else if (userInput >= 60 && userInput <= 66){
+                    System.out.println("Your grade is D");
+                }else if (userInput >= 0 && userInput <= 59){
+                    System.out.println("Yor grade is F: You are a failure!!");
+                }
+            }
+            System.out.println("Do you want to continue? [Y/N]");
+            String willContinue = sc.next();
+            if (!willContinue.toLowerCase().startsWith("y")){
+                userContinues = false;
+            }
+
+        }while (userContinues);
+
+
 
     }
 }
