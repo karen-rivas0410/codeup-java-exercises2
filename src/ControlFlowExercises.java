@@ -1,6 +1,34 @@
-import java.util.Scanner;
+import java.sql.SQLOutput;
+import java.util.Arrays;
+
 
 public class ControlFlowExercises {
+
+//    private static int fib(int n)
+//    {
+//        if (n <= 1)
+//            return n;
+//        return fib(n-1) + fib(n-2);
+//    }
+
+//    public static void printFibonacciNumbers(int n) {
+//            int f1 = 0, f2 = 1, i;
+//
+//            if (n < 1)
+//                return;
+//
+//            for (i = 1; i <= n; i += 1) {
+//                System.out.print(f2 + " ");
+//                int next = f1 + f2;
+//                f1 = f2;
+//                f2 = next;
+//            }
+//        }
+
+    //hello
+
+
+
     public static void main(String[] args) {
 //        Loop Basics
 //        While
@@ -48,6 +76,7 @@ public class ControlFlowExercises {
 //            System.out.print(i + " ");
 //        }
 
+
 //        Fizzbuzz
 //
 //        One of the most common interview questions for entry-level programmers is the FizzBuzz test.
@@ -59,17 +88,54 @@ public class ControlFlowExercises {
 //        For numbers which are multiples of both three and five print “FizzBuzz”.
 
 
-//        for (int i = 1; i <= 100; i += 1) {
-//            if (i % 15 == 0){
-//                System.out.println("Fizzbuzz");
-//            }else if (i % 3 == 0){
-//                System.out.println("Fizz");
-//            }else if (i % 5 == 0){
-//                System.out.println("Buzz");
-//            }else {
-//                System.out.println(i);
-//            }
+        for (int i = 1; i <= 100; i += 1) {
+            if (i % 15 == 0) {
+                System.out.println("Fizzbuzz");
+            } else if (i % 3 == 0) {
+                System.out.println("Fizz");
+            } else if (i % 5 == 0) {
+                System.out.println("Buzz");
+            } else {
+                System.out.println(i);
+            }
 //        }
+//
+
+
+            //fibonnaci Numbers//
+
+//            int n = 4;
+//            System.out.println(fib(n));
+
+
+//            int n = 9;
+//            System.out.println(fib(n));
+
+//        printFibonacciNumbers(7);
+
+
+//        //Creat an array with 100 elements. Loop through each value and get the square of num//
+//        int square[] = new int[100];
+//
+//        for (int i = 0; i <= 99; i += 1) {
+//            square[i] = i * i;
+//            System.out.println("The square of " + i + " is " + square[i]);
+//        }
+
+
+//        //REPLACING
+//
+//        String string1="javatpoint is a very good website";
+//        String replaceString=string1.replace('a', 'e');//replaces all occurrences of 'a' to 'e'
+//        System.out.println(replaceString);
+//
+//        System.out.println(Math.min(Double.MIN_VALUE, 0.0d));
+//
+//
+//        char[] chars = new char[] {'\u0097'};
+//        String str = new String(chars);
+//        byte[] bytes = str.getBytes();
+//        System.out.println(Arrays.toString(bytes));
 
 
 //        Display a table of powers.
@@ -121,33 +187,33 @@ public class ControlFlowExercises {
 //        C : 79 - 67
 //        D : 66 - 60
 //        F : 59 - 0
-        Scanner sc = new Scanner(System.in);
-        boolean userContinues = true;
-        do {
-        System.out.println("Please enter a grade from 0 to 100: ");
-        int userInput = sc.nextInt();
-        for (int i = 0; i < userInput; i += 1); {
-                if (userInput >= 88 && userInput <= 100){
-                    System.out.println("Your grade is A");
-                }else if (userInput >= 80 && userInput <= 87) {
-                    System.out.println("Your grade is B");
-                }else if (userInput >= 67 && userInput <= 79){
-                    System.out.println("Your grade is C");
-                }else if (userInput >= 60 && userInput <= 66){
-                    System.out.println("Your grade is D");
-                }else if (userInput >= 0 && userInput <= 59){
-                    System.out.println("Yor grade is F: You are a failure!!");
-                }
-            }
-            System.out.println("Do you want to continue? [Y/N]");
-            String willContinue = sc.next();
-            if (!willContinue.toLowerCase().startsWith("y")){
-                userContinues = false;
-            }
+//        Scanner sc = new Scanner(System.in);
+//        boolean userContinues = true;
+//        do {
+//        System.out.println("Please enter a grade from 0 to 100: ");
+//        int userInput = sc.nextInt();
+//        for (int i = 0; i < userInput; i += 1); {
+//                if (userInput >= 88 && userInput <= 100){
+//                    System.out.println("Your grade is A");
+//                }else if (userInput >= 80 && userInput <= 87) {
+//                    System.out.println("Your grade is B");
+//                }else if (userInput >= 67 && userInput <= 79){
+//                    System.out.println("Your grade is C");
+//                }else if (userInput >= 60 && userInput <= 66){
+//                    System.out.println("Your grade is D");
+//                }else if (userInput >= 0 && userInput <= 59){
+//                    System.out.println("Yor grade is F: You are a failure!!");
+//                }
+//            }
+//            System.out.println("Do you want to continue? [Y/N]");
+//            String willContinue = sc.next();
+//            if (!willContinue.toLowerCase().startsWith("y")){
+//                userContinues = false;
+//            }
+//
+//        }while (userContinues);
 
-        }while (userContinues);
 
-
-
+        }
     }
 }
